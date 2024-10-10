@@ -1,7 +1,9 @@
 "use client";
 
-import Carousel from "../components/main/carousel";
+import Banner from "../components/main/banner";
 import dynamic from "next/dynamic";
+import ContainerProduct from "../components/main/container.product";
+import Blog from "../components/main/blog";
 
 // import React, { useEffect } from "react";
 // import AppTable from "../components/app.table";
@@ -11,6 +13,7 @@ export default function page() {
   const Carousel = dynamic(() => import("../components/main/carousel"), {
     ssr: false,
   });
+  
 
   // const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
@@ -33,6 +36,9 @@ export default function page() {
   return (
     <>
       <Carousel />
+      <Banner />
+      <ContainerProduct />
+      <Blog/>
       {/* <AppTable blogs={data?.sort((a: any, b: any) => b.id - a.id)} /> */}
     </>
   );
