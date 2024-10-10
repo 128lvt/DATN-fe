@@ -991,10 +991,6 @@ ol {
   visibility: visible;
 }
 
-.product__item:hover .product__item__text h6 {
-  opacity: 0;
-}
-
 .product__item:hover .product__item__text .product__color__select {
   opacity: 1;
 }
@@ -1077,7 +1073,6 @@ ol {
 }
 
 .product__item__text {
-  padding-top: 25px;
   position: relative;
 }
 
