@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import useSWR from "swr";
-import { useEffect } from "react";
 
 // Định nghĩa interface Product
 interface Product {

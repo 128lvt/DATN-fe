@@ -4,34 +4,11 @@ import Banner from "../components/main/banner";
 import dynamic from "next/dynamic";
 import Product from "../components/main/product";
 import Blog from "../components/main/blog";
-import useSWR from "swr";
-
-// import React, { useEffect } from "react";
-// import AppTable from "../components/app.table";
-// import useSWR from "swr";
 
 export default function page() {
   const Carousel = dynamic(() => import("../components/main/carousel"), {
     ssr: false,
   });
-
-  // const fetcher = (url: string) => fetch(url).then((res) => res.json());
-
-  // const { data, error, isLoading } = useSWR(
-  //   "http://localhost:8000/blogs",
-  //   fetcher,
-  //   {
-  //     revalidateIfStale: false,
-  //     revalidateOnFocus: false,
-  //     revalidateOnReconnect: false,
-  //   }
-  // );
-
-  // console.log("data", data);
-
-  // if (!data) {
-  //   return <div>loading...</div>;
-  // }
 
   return (
     <>
