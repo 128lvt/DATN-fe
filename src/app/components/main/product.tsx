@@ -51,7 +51,7 @@ const ProductComponent = () => {
         <div className="row product__filter">
           {products.map((product) => (
             <div
-              className="col-lg-3 col-md-6 col-sm-6 mix new-arrivals"
+              className="col-lg-3 col-md-6 col-sm-6 mix new-arrivals text-center"
               key={product.id}
             >
               <Link href={`/products/${product.id}`}>
