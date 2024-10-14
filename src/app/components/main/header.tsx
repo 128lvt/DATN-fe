@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect } from "react";
+import Nav from "./Nav";
 const Header = () => {
   useEffect(() => {
     // Khởi tạo menu offcanvas và các sự kiện liên quan
@@ -102,24 +103,7 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-            <div className="col-lg-4 col-md-5">
-              <nav className="header__menu mobile-menu">
-                <ul>
-                  <li className="">
-                    <Link href="./index.html">Home</Link>
-                  </li>
-                  <li>
-                    <Link href="./shop.html">Shop</Link>
-                  </li>
-                  <li>
-                    <Link href="./blog.html">Blog</Link>
-                  </li>
-                  <li>
-                    <Link href="./contact.html">Contacts</Link>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+            <Nav/>
             <div className="col-lg-4 col-md-4 header-option-container">
               <div className="header__nav__option">
                 <div className="search-container">
