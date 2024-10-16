@@ -1,5 +1,3 @@
-import React from "react";
-
 const Blog = () => {
   return (
     <section className="latest spad">
@@ -61,7 +59,7 @@ const Blog = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Blog;
+export default Blog

@@ -1,14 +1,13 @@
-"use client";
+'use client'
 
-import Banner from "../components/main/banner";
-import dynamic from "next/dynamic";
-import Product from "../components/main/product";
-import Blog from "../components/main/blog";
-
+import Banner from '@/app/components/main/banner'
+import Blog from '@/app/components/main/blog'
+import Product from '@/app/components/main/product'
+import dynamic from 'next/dynamic'
 export default function page() {
-  const Carousel = dynamic(() => import("../components/main/carousel"), {
+  const Carousel = dynamic(() => import('@/app/components/main/carousel'), {
     ssr: false,
-  });
+  })
 
   return (
     <>
@@ -18,5 +17,5 @@ export default function page() {
       <Blog />
       {/* <AppTable blogs={data?.sort((a: any, b: any) => b.id - a.id)} /> */}
     </>
-  );
+  )
 }

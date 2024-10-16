@@ -1,18 +1,19 @@
-import type { Metadata } from "next";
-import "../globals.css";
-import Header from "../components/main/header";
-import Footer from "../components/main/footer";
-import "bootstrap/dist/css/bootstrap.min.css";
+/* eslint-disable @next/next/no-css-tags */
+import type { Metadata } from 'next'
+import '../globals.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Header from '@/app/components/main/header'
+import Footer from '@/app/components/main/footer'
 
 export const metadata: Metadata = {
-  title: "Next",
-  description: "...",
-};
+  title: 'Next',
+  description: '...',
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <>
@@ -36,5 +37,5 @@ export default function RootLayout({
         </body>
       </html>
     </>
-  );
+  )
 }

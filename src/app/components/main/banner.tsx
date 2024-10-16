@@ -1,5 +1,3 @@
-import React from "react";
-
 const Banner = () => {
   return (
     <section className="banner spad">
@@ -41,7 +39,7 @@ const Banner = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Banner;
+export default Banner

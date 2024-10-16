@@ -1,5 +1,3 @@
-import React from "react";
-
 const Footer = () => {
   return (
     <footer className="footer">
@@ -83,7 +81,7 @@ const Footer = () => {
               {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
               <p>
                 Copyright © 2020 All rights reserved | This template is made
-                with <i className="fa fa-heart-o" aria-hidden="true" /> by{" "}
+                with <i className="fa fa-heart-o" aria-hidden="true" /> by{' '}
                 <a href="https://colorlib.com" target="_blank">
                   Colorlib
                 </a>
@@ -94,7 +92,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

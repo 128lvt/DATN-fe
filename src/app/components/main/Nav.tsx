@@ -1,28 +1,28 @@
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const Nav = () => {
   const links = [
     {
-      name: "Home",
-      url: "/",
+      name: 'Home',
+      url: '/',
     },
     {
-      name: "Shop",
-      url: "/shop",
+      name: 'Shop',
+      url: '/shop',
     },
     {
-      name: "Blog",
-      url: "/blog",
+      name: 'Blog',
+      url: '/blog',
     },
     {
-      name: "Contact",
-      url: "/contact",
+      name: 'Contact',
+      url: '/contact',
     },
-  ];
+  ]
 
-  const pathName = usePathname();
-  console.log(pathName);
+  const pathName = usePathname()
+  console.log(pathName)
 
   return (
     <div className="col-lg-4 col-md-5">
@@ -30,7 +30,7 @@ const Nav = () => {
         <ul>
           {links.map((link) => (
             <li
-              className={link.url === pathName ? "active" : ""}
+              className={link.url === pathName ? 'active' : ''}
               key={link.url}
             >
               <Link href={link.url}>{link.name}</Link>
@@ -39,7 +39,7 @@ const Nav = () => {
         </ul>
       </nav>
     </div>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav

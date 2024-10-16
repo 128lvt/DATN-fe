@@ -1,42 +1,43 @@
-"use client";
-import Link from "next/link";
-import useSWR from "swr";
+'use client'
+import Link from 'next/link'
+import useSWR from 'swr'
+import Image from 'next/image'
 
 // Định nghĩa interface Product
 interface Product {
-  id: string;
-  name?: string; // Make name optional
-  price?: number;
-  thumbnail?: string;
+  id: string
+  name?: string // Make name optional
+  price?: number
+  thumbnail?: string
 }
 
 // Hàm fetcher để lấy dữ liệu từ Firebase
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
 const ProductComponent = () => {
   const { data, error, isLoading } = useSWR<{ [key: string]: Product }>(
-    "https://product-7ffbf-default-rtdb.firebaseio.com/product.json",
+    'https://product-7ffbf-default-rtdb.firebaseio.com/product.json',
     fetcher,
     {
       revalidateIfStale: false,
       revalidateOnFocus: false,
       revalidateOnReconnect: false,
     }
-  );
+  )
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div>Loading...</div>
   }
 
   if (error) {
-    return <div>Error loading products</div>;
+    return <div>Error loading products</div>
   }
 
   // Chuyển đổi dữ liệu từ object sang array để dễ xử lý
   const products: Product[] = Object.keys(data || {}).map((key) => ({
     id: key,
     ...data?.[key],
-  }));
+  }))
 
   return (
     <section className="product spad">
@@ -57,10 +58,12 @@ const ProductComponent = () => {
               <Link href={`/products/${product.id}`}>
                 <div className="product__item">
                   <div className="product__item__pic">
-                    <img
-                      src={`img/product/${product.thumbnail}`}
-                      alt={product.name}
+                    <Image
+                      src={`/img/product/${product.thumbnail}`}
+                      alt={product.name ?? ''}
                       className="img-fluid"
+                      width={260}
+                      height={260}
                     />
                   </div>
                   <div className="product__item__text">
@@ -74,7 +77,7 @@ const ProductComponent = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ProductComponent;
+export default ProductComponent

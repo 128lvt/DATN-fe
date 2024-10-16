@@ -1,33 +1,33 @@
-"use client";
-import Link from "next/link";
-import { useEffect } from "react";
-import Nav from "./Nav";
+'use client'
+import Link from 'next/link'
+import { useEffect } from 'react'
+import Nav from './Nav'
 const Header = () => {
   useEffect(() => {
     // Khởi tạo menu offcanvas và các sự kiện liên quan
-    const canvasOpen = document.querySelector(".canvas__open");
-    const offcanvasWrapper = document.querySelector(".offcanvas-menu-wrapper");
-    const offcanvasOverlay = document.querySelector(".offcanvas-menu-overlay");
+    const canvasOpen = document.querySelector('.canvas__open')
+    const offcanvasWrapper = document.querySelector('.offcanvas-menu-wrapper')
+    const offcanvasOverlay = document.querySelector('.offcanvas-menu-overlay')
 
     if (canvasOpen && offcanvasWrapper && offcanvasOverlay) {
-      canvasOpen.addEventListener("click", () => {
-        offcanvasWrapper.classList.add("active");
-        offcanvasOverlay.classList.add("active");
-      });
+      canvasOpen.addEventListener('click', () => {
+        offcanvasWrapper.classList.add('active')
+        offcanvasOverlay.classList.add('active')
+      })
 
-      offcanvasOverlay.addEventListener("click", () => {
-        offcanvasWrapper.classList.remove("active");
-        offcanvasOverlay.classList.remove("active");
-      });
+      offcanvasOverlay.addEventListener('click', () => {
+        offcanvasWrapper.classList.remove('active')
+        offcanvasOverlay.classList.remove('active')
+      })
     }
 
     return () => {
       if (canvasOpen && offcanvasWrapper && offcanvasOverlay) {
-        canvasOpen.removeEventListener("click", () => {});
-        offcanvasOverlay.removeEventListener("click", () => {});
+        canvasOpen.removeEventListener('click', () => {})
+        offcanvasOverlay.removeEventListener('click', () => {})
       }
-    };
-  }, []);
+    }
+  }, [])
 
   return (
     <>
@@ -55,16 +55,16 @@ const Header = () => {
         <div className="nav-text">
           <ul>
             <li className="nav-text-list">
-              <Link href={"/"}>Home</Link>
+              <Link href={'/'}>Home</Link>
             </li>
             <li className="nav-text-list">
-              <Link href={"/"}>Shop</Link>
+              <Link href={'/'}>Shop</Link>
             </li>
             <li className="nav-text-list">
-              <Link href={"/"}>Blog</Link>
+              <Link href={'/'}>Blog</Link>
             </li>
             <li className="nav-text-list">
-              <Link href={"/"}>Contacts</Link>
+              <Link href={'/'}>Contacts</Link>
             </li>
           </ul>
         </div>
@@ -99,25 +99,29 @@ const Header = () => {
             <div className="col-lg-4 col-md-3">
               <div className="header__logo">
                 <Link href="/">
-                <img src={"/img/logo.png"} alt="Logo" />
+                  <img src={'/img/logo.png'} alt="Logo" />
                 </Link>
               </div>
             </div>
-            <Nav/>
+            <Nav />
             <div className="col-lg-4 col-md-4 header-option-container">
               <div className="header__nav__option">
                 <div className="search-container">
                   <input
                     type="text"
                     placeholder="Search..."
-                    className="search-input"                    
+                    className="search-input"
                   />
                   <Link href="/" className="search-switch">
-                    <img src={"/img/icon/search.png"} alt="Search Icon" style={{margin: "0 26px 0 4px"}}/>
+                    <img
+                      src={'/img/icon/search.png'}
+                      alt="Search Icon"
+                      style={{ margin: '0 26px 0 4px' }}
+                    />
                   </Link>
                 </div>
                 <Link href="/">
-                  <img src={"/img/icon/cart.png"} alt="Logo"></img>{" "}
+                  <img src={'/img/icon/cart.png'} alt="Logo"></img>{' '}
                   <span>0</span>
                 </Link>
                 <div className="price">$0.00</div>
@@ -130,7 +134,7 @@ const Header = () => {
         </div>
       </header>
     </>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
