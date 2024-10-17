@@ -1,3 +1,4 @@
+'use client'
 import { useEffect } from 'react'
 import OwlCarousel from 'react-owl-carousel'
 import 'owl.carousel/dist/assets/owl.carousel.css'

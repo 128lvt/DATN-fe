@@ -1,14 +1,10 @@
 'use client'
 
-import Banner from '@/app/components/main/banner'
-import Blog from '@/app/components/main/blog'
-import Product from '@/app/components/main/product'
-import dynamic from 'next/dynamic'
+import Banner from '@/app/components/main/Banner'
+import Blog from '@/app/components/main/Blog'
+import Carousel from '@/app/components/main/Carousel'
+import Product from '@/app/components/main/Product'
 export default function page() {
-  const Carousel = dynamic(() => import('@/app/components/main/carousel'), {
-    ssr: false,
-  })
-
   return (
     <>
       <Carousel />
