@@ -1,5 +1,3 @@
-'use client'
-
 import Banner from '@/app/components/main/Banner'
 import Blog from '@/app/components/main/Blog'
 import Carousel from '@/app/components/main/Carousel'
