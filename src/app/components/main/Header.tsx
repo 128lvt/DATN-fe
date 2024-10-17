@@ -55,11 +55,11 @@ const Header = () => {
                 </div>
                 <Link href="/">
                   <Image
-                      src={'/img/icon/cart.png'}
-                      alt="Search Icon"
-                      width={22}
-                      height={22}
-                    />
+                    src={'/img/icon/cart.png'}
+                    alt="Search Icon"
+                    width={22}
+                    height={22}
+                  />
                   <span>11</span>
                 </Link>
                 <div className="price">$0.00</div>

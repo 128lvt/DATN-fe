@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { useEffect } from 'react'
+import Image from 'next/image'
 
 const MobileNav = () => {
   useEffect(() => {
@@ -39,16 +40,31 @@ const MobileNav = () => {
           </div>
         </div>
         <div className="offcanvas__nav__option">
-          <a href="/" className="search-switch">
-            <img src="/img/icon/search.png" alt="" />
-          </a>
-          <a href="/">
-            <img src="/img/icon/heart.png" alt="" />
-          </a>
-          <a href="/">
-            <img src="/img/icon/cart.png" alt="" /> <span>0</span>
-          </a>
-          <div className="price">$0.00</div>
+          <div className="search-container">
+            <input
+              type="text"
+              placeholder="Search..."
+              className="search-input"
+            />
+            <Link href="/" className="search-switch">
+              <Image
+                src={'/img/icon/search.png'}
+                alt="Search Icon"
+                width={18}
+                height={18}
+                style={{ margin: '0 0 0 8px' }}
+              />
+            </Link>
+            <Link href="/">
+              <Image
+                src={'/img/icon/cart.png'}
+                alt="Search Icon"
+                width={18}
+                height={18}
+              />
+            </Link>
+            <div className="price">$0.00</div>
+          </div>
         </div>
 
         <div className="nav-text">
