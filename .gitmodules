@@ -1,0 +1,6 @@
+[submodule "e-commerce"]
+	path = e-commerce
+	url = https://github.com/128lvt/e-commerce.git
+[submodule "admin"]
+	path = admin
+	url = https://github.com/128lvt/admin.git
